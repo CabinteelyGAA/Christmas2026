@@ -1,0 +1,1798 @@
+<!-- ==========================================================================
+     CABINTEELY GAA & CAMOGIE — CHRISTMAS HUB 2026 (CMS / CLUBZAP EMBED FRAGMENT)
+     Self-contained, fully scoped inside #cabo-christmas-hub-2026.
+     Safe to paste directly into a ClubZap or WordPress Custom HTML block.
+     ========================================================================== -->
+<div id="cabo-christmas-hub-2026">
+    <!-- Scoped Fonts & Icons (Safe for CMS embed without global CSS bleed) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ======================================================================
+           1. SCOPED RESET & CABINTEELY FESTIVE GREEN / WHITE / GOLD TOKENS
+           ====================================================================== */
+        #cabo-christmas-hub-2026 {
+            --cabo-green-dark: #006837;
+            --cabo-green-light: #009245;
+            --cabo-green-mint: #e8f5ee;
+            --cabo-gold: #f4b41a;
+            --cabo-gold-soft: #fff8e6;
+            --cabo-red: #c1121f;
+            --cabo-snow-bg: #f4faf6;
+            --cabo-text: #1e293b;
+            --cabo-muted: #475569;
+            --cabo-border: #d1e7db;
+
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--cabo-text);
+            background-color: var(--cabo-snow-bg);
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+            box-shadow: 0 12px 32px rgba(0, 104, 55, 0.12);
+            border: 2px solid var(--cabo-border);
+            max-width: 1160px;
+            margin: 0 auto;
+            line-height: 1.5;
+            box-sizing: border-box;
+        }
+
+        #cabo-christmas-hub-2026 *,
+        #cabo-christmas-hub-2026 *::before,
+        #cabo-christmas-hub-2026 *::after {
+            box-sizing: border-box;
+        }
+
+        #cabo-christmas-hub-2026 h1,
+        #cabo-christmas-hub-2026 h2,
+        #cabo-christmas-hub-2026 h3,
+        #cabo-christmas-hub-2026 h4,
+        #cabo-christmas-hub-2026 .cabo-display {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        #cabo-christmas-hub-2026 p {
+            margin: 0;
+        }
+
+        #cabo-christmas-hub-2026 a {
+            text-decoration: none;
+        }
+
+        /* Scoped Snowfall Container (Stays inside the embed container) */
+        #cabo-christmas-hub-2026 .cabo-snow-layer {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 25;
+            overflow: hidden;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-snowflake {
+            position: absolute;
+            top: -20px;
+            color: rgba(255, 255, 255, 0.92);
+            user-select: none;
+            pointer-events: none;
+            animation: caboSnowFall linear infinite;
+            text-shadow: 0 1px 4px rgba(0, 104, 55, 0.45);
+        }
+
+        @keyframes caboSnowFall {
+            0% { transform: translateY(-20px) rotate(0deg); }
+            100% { transform: translateY(1800px) rotate(360deg); }
+        }
+
+        /* ======================================================================
+           2. SCOPED HERO BANNER & LIVE COUNTDOWN
+           ====================================================================== */
+        #cabo-christmas-hub-2026 .cabo-hero {
+            background-color: var(--cabo-green-dark);
+            background-image:
+                radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+                radial-gradient(rgba(244, 180, 26, 0.18) 1px, #006837 1px);
+            background-size: 38px 38px;
+            background-position: 0 0, 19px 19px;
+            color: #ffffff;
+            padding: 36px 20px 44px;
+            text-align: center;
+            position: relative;
+            border-bottom: 4px solid var(--cabo-gold);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-hero-topbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            max-width: 960px;
+            margin: 0 auto 22px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-irish-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: var(--cabo-gold);
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-snow-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            hover: background: rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-snow-toggle:hover {
+            background: rgba(255, 255, 255, 0.26);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-hero-title {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 700;
+            line-height: 1.15;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-hero-title span {
+            color: var(--cabo-gold);
+            display: block;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-hero-sub {
+            max-width: 680px;
+            margin: 0 auto 28px;
+            font-size: 15px;
+            color: #e2f5ea;
+            font-weight: 500;
+        }
+
+        /* Countdown Box */
+        #cabo-christmas-hub-2026 .cabo-countdown-box {
+            max-width: 540px;
+            margin: 0 auto 28px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 22px;
+            padding: 18px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-countdown-label {
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--cabo-gold);
+            margin-bottom: 12px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-cd-cell {
+            background: #ffffff;
+            color: var(--cabo-green-dark);
+            border-radius: 16px;
+            padding: 12px 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-cd-cell.is-secs {
+            background: var(--cabo-red);
+            color: #ffffff;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-cd-num {
+            display: block;
+            font-family: 'Fredoka', sans-serif;
+            font-size: clamp(22px, 4vw, 34px);
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-cd-unit {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            opacity: 0.78;
+            margin-top: 2px;
+        }
+
+        /* Quick-Jump Navigation Pills */
+        #cabo-christmas-hub-2026 .cabo-quick-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-nav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: transform 0.15s ease, background 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.14);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-nav-pill:hover {
+            transform: translateY(-2px);
+        }
+
+        #cabo-christmas-hub-2026 .pill-white {
+            background: #ffffff;
+            color: var(--cabo-green-dark);
+        }
+
+        #cabo-christmas-hub-2026 .pill-green {
+            background: var(--cabo-green-light);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        #cabo-christmas-hub-2026 .pill-red {
+            background: var(--cabo-red);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        #cabo-christmas-hub-2026 .pill-gold {
+            background: var(--cabo-gold);
+            color: var(--cabo-green-dark);
+            font-weight: 800;
+        }
+
+        /* ======================================================================
+           3. MAIN HUB BODY & RESPONSIVE GRIDS
+           ====================================================================== */
+        #cabo-christmas-hub-2026 .cabo-main {
+            padding: 36px 20px 44px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-section-head {
+            margin-bottom: 22px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 5px 12px;
+            border-radius: 9999px;
+            margin-bottom: 8px;
+        }
+
+        #cabo-christmas-hub-2026 .badge-green {
+            background: var(--cabo-green-mint);
+            color: var(--cabo-green-dark);
+            border: 1px solid #b7dec8;
+        }
+
+        #cabo-christmas-hub-2026 .badge-red {
+            background: #fef2f2;
+            color: var(--cabo-red);
+            border: 1px solid #fecaca;
+        }
+
+        #cabo-christmas-hub-2026 .badge-gold {
+            background: var(--cabo-gold-soft);
+            color: #92400e;
+            border: 1px solid #fde68a;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-h2 {
+            font-size: clamp(24px, 3.5vw, 34px);
+            font-weight: 700;
+            color: var(--cabo-green-dark);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-lead {
+            font-size: 14px;
+            color: var(--cabo-muted);
+            margin-top: 4px;
+        }
+
+        /* 3-Column Event Cards */
+        #cabo-christmas-hub-2026 .cabo-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            #cabo-christmas-hub-2026 .cabo-grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        #cabo-christmas-hub-2026 .cabo-card {
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 24px;
+            border: 1px solid var(--cabo-border);
+            box-shadow: 0 4px 16px rgba(0, 104, 55, 0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-card.is-featured {
+            border: 2px solid var(--cabo-gold);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-ribbon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-bottom-left-radius: 16px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--cabo-green-dark);
+            margin-bottom: 12px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-meta-list {
+            list-style: none;
+            padding: 12px;
+            margin: 0 0 14px;
+            background: var(--cabo-snow-bg);
+            border: 1px solid var(--cabo-border);
+            border-radius: 14px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #334155;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-card-desc {
+            font-size: 14px;
+            color: var(--cabo-muted);
+            margin-bottom: 20px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 13px 16px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.2s ease, transform 0.1s ease;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-btn:hover {
+            opacity: 0.92;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-btn:active {
+            transform: scale(0.98);
+        }
+
+        #cabo-christmas-hub-2026 .btn-green {
+            background: var(--cabo-green-dark);
+            color: #ffffff;
+        }
+
+        #cabo-christmas-hub-2026 .btn-gold {
+            background: var(--cabo-gold);
+            color: var(--cabo-green-dark);
+            font-weight: 800;
+        }
+
+        #cabo-christmas-hub-2026 .btn-red {
+            background: var(--cabo-red);
+            color: #ffffff;
+        }
+
+        /* ======================================================================
+           4. TWO-COLUMN INTERACTIVE SECTIONS (MINI-GAMES & TRACKER/JUKEBOX)
+           ====================================================================== */
+        #cabo-christmas-hub-2026 .cabo-grid-2 {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-grid-even {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        @media (max-width: 920px) {
+            #cabo-christmas-hub-2026 .cabo-grid-2,
+            #cabo-christmas-hub-2026 .cabo-grid-even {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Game 1: Canvas Catch */
+        #cabo-christmas-hub-2026 .cabo-game-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-hud-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-hud-pill {
+            background: var(--cabo-snow-bg);
+            border: 1px solid var(--cabo-border);
+            padding: 6px 12px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-hud-label {
+            display: block;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #64748b;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-hud-val {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--cabo-green-dark);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-canvas-box {
+            position: relative;
+            width: 100%;
+            height: 340px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 2px solid var(--cabo-green-dark);
+            background: linear-gradient(180deg, #003b20 0%, #006837 70%, #e8f5ee 70%, #ffffff 100%);
+        }
+
+        #cabo-christmas-hub-2026 #caboGameCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            touch-action: none;
+            cursor: pointer;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-game-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 65, 34, 0.88);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-game-overlay.is-hidden {
+            display: none;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-pad-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-pad-btn {
+            padding: 13px;
+            border-radius: 14px;
+            background: var(--cabo-green-mint);
+            border: 1px solid #b7dec8;
+            color: var(--cabo-green-dark);
+            font-weight: 800;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-pad-btn:active {
+            background: var(--cabo-green-dark);
+            color: #ffffff;
+        }
+
+        /* Game 2: Trivia Quiz */
+        #cabo-christmas-hub-2026 .cabo-quiz-box {
+            background: var(--cabo-snow-bg);
+            border: 1px solid var(--cabo-border);
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-quiz-q {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--cabo-green-dark);
+            margin-bottom: 14px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-quiz-opts {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-opt-btn {
+            width: 100%;
+            text-align: left;
+            padding: 12px 14px;
+            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid var(--cabo-border);
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--cabo-text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.15s ease;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-opt-btn:hover:not(:disabled) {
+            background: var(--cabo-green-mint);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-opt-btn.is-correct {
+            background: #dcfce7;
+            border-color: var(--cabo-green-dark);
+            color: var(--cabo-green-dark);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-opt-btn.is-wrong {
+            background: #fee2e2;
+            border-color: var(--cabo-red);
+            color: var(--cabo-red);
+        }
+
+        #cabo-christmas-hub-2026 .cabo-quiz-feedback {
+            margin-top: 12px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-quiz-feedback.is-hidden {
+            display: none;
+        }
+
+        /* ======================================================================
+           5. SANTA TRACKER & CLUBHOUSE JUKEBOX
+           ====================================================================== */
+        #cabo-christmas-hub-2026 .cabo-santa-card {
+            background: linear-gradient(145deg, #c1121f 0%, #8f0d17 100%);
+            color: #ffffff;
+            border-radius: 22px;
+            padding: 26px;
+            border: 2px solid var(--cabo-gold);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-radar-panel {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 16px;
+            margin: 18px 0;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-progress-track {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.22);
+            border-radius: 9999px;
+            overflow: hidden;
+            margin: 10px 0 8px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-progress-fill {
+            height: 100%;
+            background: var(--cabo-gold);
+            border-radius: 9999px;
+            transition: width 0.6s ease;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-track-btn {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: var(--cabo-snow-bg);
+            border: 1px solid var(--cabo-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.15s ease;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-track-btn:hover {
+            background: var(--cabo-green-mint);
+        }
+
+        /* Equalizer Animation */
+        #cabo-christmas-hub-2026 .cabo-eq {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            height: 22px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-eq span {
+            width: 4px;
+            height: 6px;
+            background: var(--cabo-green-light);
+            border-radius: 9999px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-eq.is-playing span:nth-child(1) { animation: caboEq 0.55s infinite alternate; }
+        #cabo-christmas-hub-2026 .cabo-eq.is-playing span:nth-child(2) { animation: caboEq 0.4s infinite alternate 0.15s; }
+        #cabo-christmas-hub-2026 .cabo-eq.is-playing span:nth-child(3) { animation: caboEq 0.65s infinite alternate 0.25s; }
+        #cabo-christmas-hub-2026 .cabo-eq.is-playing span:nth-child(4) { animation: caboEq 0.48s infinite alternate 0.1s; }
+
+        @keyframes caboEq {
+            0% { height: 5px; }
+            100% { height: 22px; }
+        }
+
+        /* ======================================================================
+           6. EMBED FOOTER & SCOPED TOAST
+           ====================================================================== */
+        #cabo-christmas-hub-2026 .cabo-hub-footer {
+            background: var(--cabo-green-dark);
+            color: #e2f5ea;
+            padding: 22px 24px;
+            border-top: 4px solid var(--cabo-gold);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            font-size: 13px;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-hub-footer a {
+            color: var(--cabo-gold);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: var(--cabo-green-dark);
+            color: #ffffff;
+            border: 2px solid var(--cabo-gold);
+            border-radius: 16px;
+            padding: 14px 18px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 320px;
+            transform: translateY(130%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        #cabo-christmas-hub-2026 .cabo-toast.is-visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+
+    <!-- Scoped Snowfall Layer -->
+    <div id="cabo-snow-layer" class="cabo-snow-layer" aria-hidden="true"></div>
+
+    <!-- Scoped Toast Notification -->
+    <div id="cabo-toast" class="cabo-toast" role="status" aria-live="polite">
+        <i id="cabo-toast-icon" class="fa-solid fa-bell" style="color: #f4b41a; font-size: 20px;"></i>
+        <div>
+            <p id="cabo-toast-title" style="font-weight: 800; font-size: 13px; color: #f4b41a;">Clubhouse Update</p>
+            <p id="cabo-toast-msg" style="font-size: 12px; color: #ffffff; margin-top: 2px;"></p>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         1. FESTIVE HERO BANNER & LIVE COUNTDOWN (No duplicate crest)
+         ====================================================================== -->
+    <header class="cabo-hero">
+        <div class="cabo-hero-topbar">
+            <span class="cabo-irish-pill">
+                <i class="fa-solid fa-holly-berry" style="color: #ffffff;"></i>
+                <span>Nollaig Shona Duit ó Chábán tSíle</span>
+            </span>
+            <button type="button" id="cabo-snow-btn" class="cabo-snow-toggle" onclick="CaboXmas2026.toggleSnow()">
+                <i class="fa-regular fa-snowflake" style="color: #f4b41a;"></i>
+                <span>Snow: <strong id="cabo-snow-state">ON</strong></span>
+            </button>
+        </div>
+
+        <h1 class="cabo-hero-title">
+            Cabinteely GAA &amp; Camogie
+            <span>Christmas Hub 2026</span>
+        </h1>
+
+        <p class="cabo-hero-sub">
+            Welcome to our annual festive clubhouse hub! Check out our 2026 Christmas social &amp; Split the Bucket draw, play Cabo mini-games with the kids, and track Santa’s sleigh on its way to Kilbogget Park.
+        </p>
+
+        <!-- Live Countdown to Dec 25, 2026 -->
+        <div class="cabo-countdown-box">
+            <p id="cabo-cd-heading" class="cabo-countdown-label">
+                <i class="fa-regular fa-clock"></i> Countdown to Christmas Day 2026
+            </p>
+            <div class="cabo-countdown-grid">
+                <div class="cabo-cd-cell">
+                    <span id="cabo-cd-days" class="cabo-cd-num">--</span>
+                    <span class="cabo-cd-unit">Days</span>
+                </div>
+                <div class="cabo-cd-cell">
+                    <span id="cabo-cd-hours" class="cabo-cd-num">--</span>
+                    <span class="cabo-cd-unit">Hours</span>
+                </div>
+                <div class="cabo-cd-cell">
+                    <span id="cabo-cd-mins" class="cabo-cd-num">--</span>
+                    <span class="cabo-cd-unit">Mins</span>
+                </div>
+                <div class="cabo-cd-cell is-secs">
+                    <span id="cabo-cd-secs" class="cabo-cd-num">--</span>
+                    <span class="cabo-cd-unit">Secs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick-Jump Navigation Pills -->
+        <nav class="cabo-quick-nav" aria-label="Christmas Hub Sections">
+            <a href="#cabo-events-2026" class="cabo-nav-pill pill-white">
+                <i class="fa-solid fa-calendar-check" style="color: #c1121f;"></i>
+                <span>Club Events</span>
+            </a>
+            <a href="#cabo-games-2026" class="cabo-nav-pill pill-green">
+                <i class="fa-solid fa-gamepad" style="color: #f4b41a;"></i>
+                <span>Kids &amp; Family Games</span>
+            </a>
+            <a href="#cabo-santa-2026" class="cabo-nav-pill pill-red">
+                <i class="fa-solid fa-sleigh"></i>
+                <span>Santa Tracker</span>
+            </a>
+            <a href="#cabo-tunes-2026" class="cabo-nav-pill pill-green">
+                <i class="fa-solid fa-music" style="color: #f4b41a;"></i>
+                <span>Clubhouse Tunes</span>
+            </a>
+            <a href="#cabo-events-2026" class="cabo-nav-pill pill-gold">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Split the Bucket</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- ======================================================================
+         MAIN HUB CONTENT
+         ====================================================================== -->
+    <div class="cabo-main">
+
+        <!-- 2. WHAT'S ON AT THE CLUB: 2026 FESTIVE EVENTS -->
+        <section id="cabo-events-2026">
+            <div class="cabo-section-head">
+                <span class="cabo-badge badge-red">
+                    <i class="fa-solid fa-champagne-glasses"></i> Clubhouse Calendar 2026
+                </span>
+                <h2 class="cabo-h2">What’s On at the Club</h2>
+                <p class="cabo-lead">Celebrate a brilliant 2026 season on and off the pitch with teammates, coaches, parents, and friends.</p>
+            </div>
+
+            <div class="cabo-grid-3">
+                <!-- Card 1: Christmas Craic & Ceol Night -->
+                <article class="cabo-card">
+                    <span class="cabo-ribbon" style="background: #c1121f; color: #ffffff;">FLAGSHIP NIGHT</span>
+                    <div>
+                        <div class="cabo-icon-box" style="background: #e8f5ee; color: #006837;">
+                            <i class="fa-solid fa-guitar"></i>
+                        </div>
+                        <h3 class="cabo-card-title">Christmas Craic &amp; Ceol Night 2026</h3>
+                        <ul class="cabo-meta-list">
+                            <li><i class="fa-regular fa-calendar" style="color: #009245; width: 16px;"></i> Saturday, Dec 12th, 2026 • 8:00 PM</li>
+                            <li><i class="fa-solid fa-location-dot" style="color: #c1121f; width: 16px;"></i> Seapoint Rugby Club, Killiney</li>
+                            <li><i class="fa-solid fa-ticket" style="color: #d97706; width: 16px;"></i> Live Trad, DJ, Finger Food &amp; Monster Raffle</li>
+                        </ul>
+                        <p class="cabo-card-desc">
+                            Our annual adult players, coaches, parents &amp; supporters Christmas social! Dust off the Christmas jumpers and join us at Seapoint RFC for live music and our festive raffle.
+                        </p>
+                    </div>
+                    <a href="https://cabinteelygaa.clubzap.com/products" target="_blank" rel="noopener" class="cabo-btn btn-green">
+                        <span>Get Tickets &amp; Raffle Strips</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i>
+                    </a>
+                </article>
+
+                <!-- Card 2: Christmas Split the Bucket Special Draw -->
+                <article class="cabo-card is-featured">
+                    <span class="cabo-ribbon" style="background: #f4b41a; color: #006837;">GUARANTEED JACKPOT</span>
+                    <div>
+                        <div class="cabo-icon-box" style="background: #fff8e6; color: #b45309;">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="cabo-card-title">Christmas Split the Bucket Special</h3>
+                        <ul class="cabo-meta-list" style="background: #fffbeb; border-color: #fde68a;">
+                            <li><i class="fa-regular fa-calendar" style="color: #006837; width: 16px;"></i> Bumper Draw: Sunday, Dec 20th, 2026</li>
+                            <li><i class="fa-solid fa-gift" style="color: #c1121f; width: 16px;"></i> Bonus Spot Prizes: Christmas Hampers &amp; Vouchers</li>
+                            <li><i class="fa-solid fa-coins" style="color: #d97706; width: 16px;"></i> 50% to Winner • 50% to Juvenile Equipment</li>
+                        </ul>
+                        <p class="cabo-card-desc">
+                            Support our weekly club fundraiser this December! Every entry before Dec 20th goes into our bumper Christmas pot plus bonus festive hamper spot prizes drawn live.
+                        </p>
+                    </div>
+                    <a href="https://cabinteelygaa.clubzap.com/categories/fundraising/products" target="_blank" rel="noopener" class="cabo-btn btn-gold">
+                        <span>Enter Christmas Draw Now</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i>
+                    </a>
+                </article>
+
+                <!-- Card 3: McKeever Club Shop -->
+                <article class="cabo-card">
+                    <span class="cabo-ribbon" style="background: #009245; color: #ffffff;">GIFT IDEAS</span>
+                    <div>
+                        <div class="cabo-icon-box" style="background: #e8f5ee; color: #009245;">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h3 class="cabo-card-title">Cabo Gear &amp; McKeever Club Shop</h3>
+                        <ul class="cabo-meta-list">
+                            <li><i class="fa-solid fa-truck-fast" style="color: #c1121f; width: 16px;"></i> Custom Kit Deadline: Nov 29th, 2026</li>
+                            <li><i class="fa-solid fa-box-open" style="color: #006837; width: 16px;"></i> Stocked Bobble Hats &amp; Bags: Dec 16th</li>
+                            <li><i class="fa-solid fa-star" style="color: #d97706; width: 16px;"></i> Official Jerseys, Half-Zips, Gloves &amp; Sliotars</li>
+                        </ul>
+                        <p class="cabo-card-desc">
+                            Put Cabinteely colours under the tree! Order official Cabinteely GAA &amp; Camogie half-zips, training jerseys, bobble hats, and gear bags in time for Christmas morning.
+                        </p>
+                    </div>
+                    <a href="https://www.mckeeversports.com/collections/cabinteely-gaa" target="_blank" rel="noopener" class="cabo-btn btn-red">
+                        <span>Visit McKeever Club Shop</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. INTERACTIVE MINI-GAMES FOR KIDS & FAMILIES -->
+        <section id="cabo-games-2026">
+            <div class="cabo-section-head">
+                <span class="cabo-badge badge-gold">
+                    <i class="fa-solid fa-children"></i> Juvenile &amp; Family Zone
+                </span>
+                <h2 class="cabo-h2">Cabo Christmas Mini-Games</h2>
+                <p class="cabo-lead">Challenge your family and teammates! Play our sliotar-catching arcade game or test your Cabinteely GAA &amp; festive trivia.</p>
+            </div>
+
+            <div class="cabo-grid-2">
+                <!-- GAME 1: Cabo Sliotar & Snowball Catch -->
+                <div class="cabo-card">
+                    <div class="cabo-game-header">
+                        <div>
+                            <h3 class="cabo-card-title" style="margin-bottom: 2px;">1. Cabo Sliotar &amp; Snowball Catch</h3>
+                            <p style="font-size: 12px; color: #64748b;">Catch Golden Sliotars (+15) &amp; Gifts (+10). Dodge Coal (-1 Life)!</p>
+                        </div>
+                        <div class="cabo-hud-row">
+                            <div class="cabo-hud-pill">
+                                <span class="cabo-hud-label">Score</span>
+                                <span id="cabo-g-score" class="cabo-hud-val">0</span>
+                            </div>
+                            <div class="cabo-hud-pill" style="background: #fffbeb; border-color: #fde68a;">
+                                <span class="cabo-hud-label" style="color: #b45309;">Best</span>
+                                <span id="cabo-g-best" class="cabo-hud-val" style="color: #b45309;">0</span>
+                            </div>
+                            <div class="cabo-hud-pill" style="background: #fef2f2; border-color: #fecaca;">
+                                <span class="cabo-hud-label" style="color: #c1121f;">Lives</span>
+                                <span id="cabo-g-lives" class="cabo-hud-val" style="font-size: 13px;">❤️❤️❤️</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cabo-canvas-wrap" class="cabo-canvas-box">
+                        <canvas id="caboGameCanvas"></canvas>
+                        <div id="cabo-game-overlay" class="cabo-game-overlay">
+                            <div style="width: 56px; height: 56px; border-radius: 16px; background: #f4b41a; color: #006837; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 10px;">
+                                <i class="fa-solid fa-hockey-puck"></i>
+                            </div>
+                            <h4 id="cabo-ov-title" style="font-size: 24px; font-weight: 700; margin-bottom: 6px;">Ready for Puck-Out?</h4>
+                            <p id="cabo-ov-desc" style="font-size: 13px; color: #e2f5ea; max-width: 280px; margin-bottom: 16px;">
+                                Slide your finger, move your mouse, or use the Left/Right buttons below to move your Cabo Gear Bag!
+                            </p>
+                            <button type="button" id="cabo-start-btn" class="cabo-btn btn-gold" style="width: auto; padding: 12px 24px;" onclick="CaboXmas2026.startGame()">
+                                <i class="fa-solid fa-play"></i>
+                                <span>Start Game</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cabo-pad-row">
+                        <button type="button" id="cabo-pad-left" class="cabo-pad-btn">
+                            <i class="fa-solid fa-arrow-left"></i> Move Left
+                        </button>
+                        <button type="button" id="cabo-pad-right" class="cabo-pad-btn">
+                            Move Right <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GAME 2: Cabo Christmas Trivia Quiz -->
+                <div class="cabo-card">
+                    <div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                            <h3 class="cabo-card-title" style="margin: 0;">2. Cabo Christmas Quiz</h3>
+                            <span id="cabo-q-badge" class="cabo-badge badge-green" style="margin: 0;">Question 1 / 5</span>
+                        </div>
+
+                        <div id="cabo-quiz-box" class="cabo-quiz-box">
+                            <p id="cabo-quiz-q" class="cabo-quiz-q">Loading question...</p>
+                            <div id="cabo-quiz-opts" class="cabo-quiz-opts"></div>
+                            <div id="cabo-quiz-fb" class="cabo-quiz-feedback is-hidden"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 16px; display: flex; align-items: center; justify-content: space-between;">
+                        <span style="font-size: 13px; font-weight: 700; color: #475569;">
+                            Score: <strong id="cabo-q-score" style="color: #006837;">0</strong> / 5
+                        </span>
+                        <button type="button" id="cabo-q-next" class="cabo-btn btn-green" style="width: auto; padding: 10px 18px; display: none;" onclick="CaboXmas2026.nextQuestion()">
+                            Next Question <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SANTA TRACKER 2026 & 5. CLUBHOUSE CHRISTMAS TUNES -->
+        <section class="cabo-grid-even">
+            <!-- Santa Tracker 2026 -->
+            <div id="cabo-santa-2026" class="cabo-santa-card">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                        <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 9999px; background: rgba(255,255,255,0.18); color: #f4b41a; font-size: 11px; font-weight: 800; text-transform: uppercase;">
+                            <i class="fa-solid fa-satellite-dish"></i> Radar Active • 2026
+                        </span>
+                        <span id="cabo-santa-tag" style="font-size: 12px; font-weight: 600; color: #fee2e2;">North Pole HQ</span>
+                    </div>
+
+                    <h2 style="font-size: 26px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">
+                        Santa Tracker 2026: Kilbogget Park Radar
+                    </h2>
+                    <p id="cabo-santa-desc" style="font-size: 14px; color: #fee2e2;">
+                        Chief Elf Meteorologist reports that Rudolph and the reindeer are training over Lapland and checking Dublin 18 chimneys!
+                    </p>
+
+                    <div class="cabo-radar-panel">
+                        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px; font-size: 12px; font-weight: 700; color: #f4b41a;">
+                            <span><i class="fa-solid fa-location-crosshairs"></i> Live Telemetry</span>
+                            <span id="cabo-santa-eta" style="background: #006837; color: #ffffff; padding: 2px 10px; border-radius: 8px;">
+                                Cabinteely ETA: Dec 24, 11:45 PM
+                            </span>
+                        </div>
+                        <div class="cabo-progress-track">
+                            <div id="cabo-santa-bar" class="cabo-progress-fill" style="width: 35%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 11px; color: #fecaca;">
+                            <span>North Pole</span>
+                            <span id="cabo-santa-wp">Workshop Prep</span>
+                            <span>Kilbogget Park, Dublin</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="cabo-btn" style="background: rgba(255,255,255,0.18); color: #ffffff; border: 1px solid rgba(255,255,255,0.3); margin-bottom: 14px;" onclick="CaboXmas2026.pingRadar()">
+                        <i class="fa-solid fa-radar" style="color: #f4b41a;"></i>
+                        <span>Ping Sleigh Radar for Cabinteely Update</span>
+                    </button>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.2);">
+                    <a href="https://www.noradsanta.org/" target="_blank" rel="noopener" class="cabo-btn" style="background: #ffffff; color: #c1121f; font-size: 13px;">
+                        <i class="fa-solid fa-compass"></i>
+                        <span>NORAD Tracker</span>
+                    </a>
+                    <a href="https://santatracker.google.com/" target="_blank" rel="noopener" class="cabo-btn btn-green" style="font-size: 13px;">
+                        <i class="fa-solid fa-earth-europe"></i>
+                        <span>Google Santa</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Clubhouse Christmas Tunes (Self-contained Web Audio API Chimes) -->
+            <div id="cabo-tunes-2026" class="cabo-card">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                        <span class="cabo-badge badge-green" style="margin: 0;">
+                            <i class="fa-solid fa-radio"></i> Clubhouse Audio
+                        </span>
+                        <div id="cabo-eq" class="cabo-eq" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <h2 class="cabo-h2" style="font-size: 26px; margin-bottom: 6px;">Clubhouse Christmas Tunes</h2>
+                    <p style="font-size: 14px; color: #475569; margin-bottom: 16px;">
+                        Tap a festive chime track below to play live synthesized Christmas bells right in your browser, or open our clubhouse playlists!
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px;">
+                        <button type="button" class="cabo-track-btn" onclick="CaboXmas2026.playTrack(0)">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="width: 38px; height: 38px; border-radius: 10px; background: #006837; color: #f4b41a; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-solid fa-bell"></i>
+                                </span>
+                                <div>
+                                    <strong style="display: block; font-size: 14px; color: #006837;">Jingle Bells (Kilbogget Chimes)</strong>
+                                    <span style="font-size: 12px; color: #64748b;">Festive Bell Synth • Tap to Play</span>
+                                </div>
+                            </div>
+                            <span style="font-size: 12px; font-weight: 700; color: #006837; background: #ffffff; padding: 6px 10px; border-radius: 10px; border: 1px solid #d1e7db;">
+                                <i class="fa-solid fa-play"></i> Play
+                            </span>
+                        </button>
+
+                        <button type="button" class="cabo-track-btn" onclick="CaboXmas2026.playTrack(1)">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="width: 38px; height: 38px; border-radius: 10px; background: #c1121f; color: #ffffff; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <div>
+                                    <strong style="display: block; font-size: 14px; color: #006837;">We Wish You a Merry Christmas</strong>
+                                    <span style="font-size: 12px; color: #64748b;">Clubhouse Celebration Chimes</span>
+                                </div>
+                            </div>
+                            <span style="font-size: 12px; font-weight: 700; color: #006837; background: #ffffff; padding: 6px 10px; border-radius: 10px; border: 1px solid #d1e7db;">
+                                <i class="fa-solid fa-play"></i> Play
+                            </span>
+                        </button>
+
+                        <button type="button" class="cabo-track-btn" onclick="CaboXmas2026.playTrack(2)">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="width: 38px; height: 38px; border-radius: 10px; background: #f4b41a; color: #006837; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fa-solid fa-tree"></i>
+                                </span>
+                                <div>
+                                    <strong style="display: block; font-size: 14px; color: #006837;">Deck the Halls (Cabo Mix)</strong>
+                                    <span style="font-size: 12px; color: #64748b;">Upbeat Festive Glockenspiel</span>
+                                </div>
+                            </div>
+                            <span style="font-size: 12px; font-weight: 700; color: #006837; background: #ffffff; padding: 6px 10px; border-radius: 10px; border: 1px solid #d1e7db;">
+                                <i class="fa-solid fa-play"></i> Play
+                            </span>
+                        </button>
+                    </div>
+
+                    <div style="text-align: right; margin-bottom: 14px;">
+                        <button type="button" onclick="CaboXmas2026.stopAudio()" style="background: none; border: none; color: #c1121f; font-weight: 700; font-size: 12px; cursor: pointer;">
+                            <i class="fa-solid fa-stop"></i> Stop Audio Chimes
+                        </button>
+                    </div>
+                </div>
+
+                <div style="padding-top: 14px; border-top: 1px solid #d1e7db;">
+                    <p style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #64748b; margin-bottom: 10px;">Full Clubhouse Party Playlists</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <a href="https://open.spotify.com/search/Irish%20Christmas%20Classics" target="_blank" rel="noopener" class="cabo-btn" style="background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; font-size: 13px;">
+                            <i class="fa-brands fa-spotify" style="color: #1DB954; font-size: 18px;"></i>
+                            <span>Spotify Hits</span>
+                        </a>
+                        <a href="https://www.youtube.com/results?search_query=Christmas+Party+Songs+Playlist" target="_blank" rel="noopener" class="cabo-btn" style="background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; font-size: 13px;">
+                            <i class="fa-brands fa-youtube" style="color: #FF0000; font-size: 18px;"></i>
+                            <span>YouTube Mix</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CHAIRPERSON'S MESSAGE & 2027 COMMUNITY LINKS -->
+        <section class="cabo-grid-2">
+            <div class="cabo-card">
+                <div>
+                    <span class="cabo-badge badge-green">
+                        <i class="fa-solid fa-envelope-open-text"></i> From the Executive Committee
+                    </span>
+                    <h3 class="cabo-card-title" style="font-size: 24px;">Christmas &amp; New Year 2027 Message</h3>
+                    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: #334155;">
+                        <p>A chairde,</p>
+                        <p>
+                            As 2026 draws to a close, on behalf of the entire Cabinteely GAA &amp; Camogie Executive Committee, we extend a heartfelt <strong>Nollaig Shona</strong> to all our players, volunteer coaches, parents, referees, sponsors, and supporters across Cabinteely, Killiney, Loughlinstown, and Foxrock.
+                        </p>
+                        <p>
+                            From Saturday morning Nursery sessions at Kilbogget Park to thrilling championship battles in Gaelic football, hurling, and camogie, our club continues to thrive thanks to your generosity and community spirit.
+                        </p>
+                        <p style="font-weight: 700; color: #006837;">
+                            Wishing every family a peaceful, joyful Christmas and a healthy, successful 2027. Cábán tSíle Abú!
+                        </p>
+                    </div>
+                </div>
+                <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #d1e7db; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <strong style="display: block; font-size: 14px; color: #006837;">Club Chairperson &amp; Executive</strong>
+                        <span style="font-size: 12px; color: #64748b;">Cabinteely GAA &amp; Camogie • Kilbogget Park</span>
+                    </div>
+                    <span class="cabo-badge badge-green" style="margin: 0;">Est. 1978</span>
+                </div>
+            </div>
+
+            <div class="cabo-card" style="background: #006837; color: #ffffff; border: 2px solid #f4b41a;">
+                <div>
+                    <span class="cabo-badge" style="background: #f4b41a; color: #006837;">Looking Ahead to 2027</span>
+                    <h3 class="cabo-card-title" style="color: #ffffff; font-size: 24px;">Get Involved in 2027</h3>
+                    <p style="font-size: 14px; color: #e2f5ea; margin-bottom: 18px;">
+                        Register your child for our 2027 Saturday Morning Nursery Academy or partner with our growing community club as a 2027 team sponsor.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="https://www.cabinteelygaa.com/membership" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px; border-radius: 14px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: #ffffff;">
+                            <div>
+                                <strong style="display: block; font-size: 14px;">2027 Nursery &amp; Academy Sign-Up</strong>
+                                <span style="font-size: 12px; color: #d1fae5;">Boys &amp; Girls Ages 4–7 • Saturday Mornings</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: #f4b41a;"></i>
+                        </a>
+
+                        <a href="https://www.cabinteelygaa.com/contact" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: space-between; padding: 14px; border-radius: 14px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: #ffffff;">
+                            <div>
+                                <strong style="display: block; font-size: 14px;">2027 Club &amp; Pitch Sponsorship</strong>
+                                <span style="font-size: 12px; color: #d1fae5;">Partner with Cabinteely GAA &amp; Camogie</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: #f4b41a;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                    <span style="font-size: 12px; color: #e2f5ea;">Share with your team WhatsApp:</span>
+                    <button type="button" class="cabo-btn btn-gold" style="width: auto; padding: 10px 16px; font-size: 12px;" onclick="CaboXmas2026.copyLink()">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Copy Hub Link</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ======================================================================
+         7. EMBED FOOTER WITH PREVIOUS CHRISTMAS ARCHIVES
+         ====================================================================== -->
+    <div class="cabo-hub-footer">
+        <div>
+            <strong>Cabinteely GAA &amp; Camogie Club</strong> • Kilbogget Park, Cabinteely, Dublin 18
+        </div>
+        <div>
+            Previous Festive Hubs:
+            <a href="https://cabinteelygaa.com/our-news/christmas-2025" target="_blank" rel="noopener">2025</a> •
+            <a href="https://cabinteelygaa.com/our-news/christmas-2024" target="_blank" rel="noopener">2024</a> •
+            <a href="https://cabinteelygaa.com/our-news/christmas-2023" target="_blank" rel="noopener">2023</a>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         ENCAPSULATED JAVASCRIPT MODULE (Zero global namespace pollution)
+         ====================================================================== -->
+    <script>
+    (function () {
+        const root = document.getElementById('cabo-christmas-hub-2026');
+        if (!root) return;
+
+        /* ----------------------------------------------------------------------
+           A. Toast Notification & Safe Clipboard Copy
+           ---------------------------------------------------------------------- */
+        let toastTimer = null;
+        function showToast(title, msg, icon) {
+            const box = root.querySelector('#cabo-toast');
+            root.querySelector('#cabo-toast-title').textContent = title;
+            root.querySelector('#cabo-toast-msg').textContent = msg;
+            root.querySelector('#cabo-toast-icon').className = 'fa-solid ' + (icon || 'fa-bell');
+            box.classList.add('is-visible');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => box.classList.remove('is-visible'), 3400);
+        }
+
+        function copyLink() {
+            const url = window.location.href.startsWith('http')
+                ? window.location.href
+                : 'https://www.cabinteelygaa.com/our-news/christmas-2026';
+            const input = document.createElement('input');
+            input.value = url;
+            document.body.appendChild(input);
+            input.select();
+            try {
+                document.execCommand('copy');
+                showToast('Hub Link Copied!', 'Paste into your team WhatsApp group.', 'fa-check-circle');
+            } catch (e) {
+                showToast('Share Hub', 'www.cabinteelygaa.com/our-news/christmas-2026', 'fa-share-nodes');
+            }
+            document.body.removeChild(input);
+        }
+
+        /* ----------------------------------------------------------------------
+           B. Scoped Snowfall Effect
+           ---------------------------------------------------------------------- */
+        let snowOn = true;
+        function renderSnow() {
+            const layer = root.querySelector('#cabo-snow-layer');
+            layer.innerHTML = '';
+            if (!snowOn) return;
+            const glyphs = ['❄', '❅', '❆', '•'];
+            const count = window.innerWidth < 640 ? 16 : 26;
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('span');
+                el.className = 'cabo-snowflake';
+                el.textContent = glyphs[i % glyphs.length];
+                el.style.left = (Math.random() * 98) + '%';
+                el.style.fontSize = (Math.random() * 10 + 11) + 'px';
+                el.style.animationDuration = (Math.random() * 7 + 7) + 's';
+                el.style.animationDelay = (Math.random() * 5) + 's';
+                layer.appendChild(el);
+            }
+        }
+
+        function toggleSnow() {
+            snowOn = !snowOn;
+            root.querySelector('#cabo-snow-state').textContent = snowOn ? 'ON' : 'OFF';
+            renderSnow();
+        }
+
+        /* ----------------------------------------------------------------------
+           C. Live Countdown to Christmas Day 2026
+           ---------------------------------------------------------------------- */
+        function tickCountdown() {
+            const target = new Date('2026-12-25T00:00:00');
+            const diff = target - new Date();
+            if (diff <= 0) {
+                root.querySelector('#cabo-cd-heading').innerHTML =
+                    '<i class="fa-solid fa-star"></i> Nollaig Shona! Merry Christmas 2026!';
+                ['days', 'hours', 'mins', 'secs'].forEach(u => {
+                    root.querySelector('#cabo-cd-' + u).textContent = '00';
+                });
+                return;
+            }
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor((diff / 3600000) % 24);
+            const m = Math.floor((diff / 60000) % 60);
+            const s = Math.floor((diff / 1000) % 60);
+            root.querySelector('#cabo-cd-days').textContent = String(d).padStart(2, '0');
+            root.querySelector('#cabo-cd-hours').textContent = String(h).padStart(2, '0');
+            root.querySelector('#cabo-cd-mins').textContent = String(m).padStart(2, '0');
+            root.querySelector('#cabo-cd-secs').textContent = String(s).padStart(2, '0');
+        }
+
+        /* ----------------------------------------------------------------------
+           D. Santa Tracker 2026 Radar
+           ---------------------------------------------------------------------- */
+        const radarPings = [
+            {
+                wp: 'North Pole Toy Workshop',
+                eta: 'Cabinteely ETA: Dec 24, 11:45 PM',
+                pct: 34,
+                desc: 'Elves are loading green, white & gold Cabinteely hurleys and footballs onto the sleigh!'
+            },
+            {
+                wp: 'Reindeer Flight Check',
+                eta: 'Dublin Airspace Cleared',
+                pct: 52,
+                desc: 'Rudolph’s nose is glowing bright at 100% visibility for landing beside Kilbogget Park!'
+            },
+            {
+                wp: 'Route Plotted: Dublin 18',
+                eta: 'Approach: Churchview Rd',
+                pct: 68,
+                desc: 'Santa’s GPS shows a direct approach over Killiney Hill into Cabinteely on Christmas Eve night.'
+            }
+        ];
+        let pingIdx = 0;
+
+        function initSanta() {
+            const now = new Date();
+            if (now.getMonth() === 11 && now.getDate() === 24) {
+                root.querySelector('#cabo-santa-tag').textContent = 'CHRISTMAS EVE LIVE';
+                root.querySelector('#cabo-santa-wp').textContent = 'En Route to Ireland!';
+                root.querySelector('#cabo-santa-bar').style.width = '84%';
+                root.querySelector('#cabo-santa-desc').textContent =
+                    'Sleigh airborne! Get to bed early in Cabinteely — Santa is crossing Europe toward Dublin!';
+            } else if (now.getMonth() === 11 && now.getDate() === 25) {
+                root.querySelector('#cabo-santa-tag').textContent = 'DELIVERY COMPLETE';
+                root.querySelector('#cabo-santa-wp').textContent = 'Visited Cabinteely!';
+                root.querySelector('#cabo-santa-bar').style.width = '100%';
+                root.querySelector('#cabo-santa-eta').textContent = 'Status: Presents Delivered!';
+                root.querySelector('#cabo-santa-desc').textContent =
+                    'Santa visited Cabinteely overnight and left treats under the tree! Nollaig Shona!';
+            }
+        }
+
+        function pingRadar() {
+            pingIdx = (pingIdx + 1) % radarPings.length;
+            const p = radarPings[pingIdx];
+            root.querySelector('#cabo-santa-wp').textContent = p.wp;
+            root.querySelector('#cabo-santa-eta').textContent = p.eta;
+            root.querySelector('#cabo-santa-bar').style.width = p.pct + '%';
+            root.querySelector('#cabo-santa-desc').textContent = p.desc;
+            showToast('Santa Radar Pinged!', p.eta, 'fa-satellite-dish');
+        }
+
+        /* ----------------------------------------------------------------------
+           E. Game 1: Cabo Sliotar & Snowball Catch (HTML5 Canvas in Green/Gold)
+           ---------------------------------------------------------------------- */
+        const canvas = root.querySelector('#caboGameCanvas');
+        const ctx = canvas.getContext('2d');
+        const wrap = root.querySelector('#cabo-canvas-wrap');
+
+        let running = false;
+        let score = 0;
+        let best = parseInt(localStorage.getItem('cabo_xmas_best_2026') || '0', 10);
+        let lives = 3;
+        let rafId = null;
+        let timer = 0;
+        let items = [];
+
+        root.querySelector('#cabo-g-best').textContent = best;
+
+        const bag = { x: 120, y: 0, w: 78, h: 28, speed: 7, left: false, right: false };
+
+        function sizeCanvas() {
+            canvas.width = wrap.clientWidth;
+            canvas.height = wrap.clientHeight;
+            bag.y = canvas.height - 44;
+            if (bag.x > canvas.width - bag.w) bag.x = Math.max(0, canvas.width - bag.w);
+            if (!running) drawPitch();
+        }
+
+        function drawPitch() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+            ctx.lineWidth = 4;
+            const l = canvas.width * 0.35;
+            const r = canvas.width * 0.65;
+            const g = canvas.height * 0.7;
+            ctx.beginPath();
+            ctx.moveTo(l, g); ctx.lineTo(l, g - 85);
+            ctx.moveTo(r, g); ctx.lineTo(r, g - 85);
+            ctx.moveTo(l, g - 42); ctx.lineTo(r, g - 42);
+            ctx.stroke();
+        }
+
+        function startGame() {
+            score = 0;
+            lives = 3;
+            items = [];
+            timer = 0;
+            running = true;
+            root.querySelector('#cabo-g-score').textContent = '0';
+            root.querySelector('#cabo-g-lives').textContent = '❤️❤️❤️';
+            root.querySelector('#cabo-game-overlay').classList.add('is-hidden');
+            sizeCanvas();
+            bag.x = (canvas.width - bag.w) / 2;
+            cancelAnimationFrame(rafId);
+            loopGame();
+        }
+
+        function loopGame() {
+            if (!running) return;
+            drawPitch();
+
+            if (bag.left) bag.x -= bag.speed;
+            if (bag.right) bag.x += bag.speed;
+            bag.x = Math.max(0, Math.min(canvas.width - bag.w, bag.x));
+
+            timer++;
+            if (timer >= Math.max(26, 50 - Math.floor(score / 25))) {
+                const r = Math.random();
+                const type = r < 0.44 ? 'sliotar' : (r < 0.76 ? 'gift' : 'coal');
+                items.push({
+                    x: Math.random() * (canvas.width - 40) + 20,
+                    y: -22,
+                    rad: type === 'sliotar' ? 15 : 16,
+                    vy: 2.6 + Math.min(3.4, score / 90) + (type === 'coal' ? 0.5 : 0),
+                    type: type
+                });
+                timer = 0;
+            }
+
+            for (let i = items.length - 1; i >= 0; i--) {
+                const it = items[i];
+                it.y += it.vy;
+
+                // Draw item
+                ctx.save();
+                if (it.type === 'sliotar') {
+                    ctx.fillStyle = '#f4b41a';
+                    ctx.beginPath(); ctx.arc(it.x, it.y, it.rad, 0, Math.PI * 2); ctx.fill();
+                    ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2; ctx.stroke();
+                    ctx.strokeStyle = '#c1121f'; ctx.lineWidth = 1.6;
+                    ctx.beginPath(); ctx.arc(it.x - 4, it.y, it.rad * 0.65, -0.8, 0.8); ctx.stroke();
+                } else if (it.type === 'gift') {
+                    const s = it.rad * 1.65;
+                    ctx.fillStyle = '#c1121f';
+                    ctx.beginPath(); ctx.roundRect(it.x - s / 2, it.y - s / 2, s, s, 5); ctx.fill();
+                    ctx.fillStyle = '#f4b41a';
+                    ctx.fillRect(it.x - 2.5, it.y - s / 2, 5, s);
+                    ctx.fillRect(it.x - s / 2, it.y - 2.5, s, 5);
+                } else {
+                    ctx.fillStyle = '#1e293b';
+                    ctx.beginPath(); ctx.arc(it.x, it.y, it.rad, 0, Math.PI * 2); ctx.fill();
+                    ctx.strokeStyle = '#94a3b8'; ctx.lineWidth = 2; ctx.stroke();
+                    ctx.fillStyle = '#e2e8f0'; ctx.font = 'bold 9px sans-serif'; ctx.textAlign = 'center';
+                    ctx.fillText('COAL', it.x, it.y + 3);
+                }
+                ctx.restore();
+
+                // Collision
+                if (it.x + it.rad > bag.x && it.x - it.rad < bag.x + bag.w &&
+                    it.y + it.rad > bag.y && it.y - it.rad < bag.y + bag.h) {
+                    if (it.type === 'sliotar') score += 15;
+                    else if (it.type === 'gift') score += 10;
+                    else {
+                        lives--;
+                        root.querySelector('#cabo-g-lives').textContent =
+                            '❤️'.repeat(Math.max(0, lives)) + '🖤'.repeat(Math.max(0, 3 - lives));
+                    }
+                    root.querySelector('#cabo-g-score').textContent = score;
+                    items.splice(i, 1);
+
+                    if (lives <= 0) {
+                        running = false;
+                        if (score > best) {
+                            best = score;
+                            localStorage.setItem('cabo_xmas_best_2026', String(best));
+                            root.querySelector('#cabo-g-best').textContent = best;
+                        }
+                        root.querySelector('#cabo-ov-title').textContent = 'Full-Time Whistle! Score: ' + score;
+                        root.querySelector('#cabo-ov-desc').textContent = 'Great effort! Tap below to play again.';
+                        root.querySelector('#cabo-start-btn').innerHTML =
+                            '<i class="fa-solid fa-rotate-right"></i><span>Play Again</span>';
+                        root.querySelector('#cabo-game-overlay').classList.remove('is-hidden');
+                        return;
+                    }
+                    continue;
+                }
+
+                if (it.y - it.rad > canvas.height) items.splice(i, 1);
+            }
+
+            // Draw Cabo Green & Gold Gear Bag
+            ctx.save();
+            ctx.fillStyle = '#006837';
+            ctx.beginPath(); ctx.roundRect(bag.x, bag.y, bag.w, bag.h, 9); ctx.fill();
+            ctx.fillStyle = '#f4b41a';
+            ctx.fillRect(bag.x + 4, bag.y + 5, bag.w - 8, 4);
+            ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2; ctx.stroke();
+            ctx.fillStyle = '#ffffff'; ctx.font = 'bold 11px Inter, sans-serif'; ctx.textAlign = 'center';
+            ctx.fillText('CABO', bag.x + bag.w / 2, bag.y + 21);
+            ctx.restore();
+
+            rafId = requestAnimationFrame(loopGame);
+        }
+
+        function moveBagPointer(clientX) {
+            if (!running) return;
+            const rect = canvas.getBoundingClientRect();
+            bag.x = Math.max(0, Math.min(canvas.width - bag.w, (clientX - rect.left) - bag.w / 2));
+        }
+
+        canvas.addEventListener('mousemove', e => moveBagPointer(e.clientX));
+        canvas.addEventListener('touchmove', e => { if (e.touches[0]) moveBagPointer(e.touches[0].clientX); }, { passive: true });
+        canvas.addEventListener('touchstart', e => { if (e.touches[0]) moveBagPointer(e.touches[0].clientX); }, { passive: true });
+
+        const pLeft = root.querySelector('#cabo-pad-left');
+        const pRight = root.querySelector('#cabo-pad-right');
+        ['mousedown', 'touchstart'].forEach(ev => {
+            pLeft.addEventListener(ev, e => { e.preventDefault(); bag.left = true; });
+            pRight.addEventListener(ev, e => { e.preventDefault(); bag.right = true; });
+        });
+        ['mouseup', 'mouseleave', 'touchend'].forEach(ev => {
+            pLeft.addEventListener(ev, () => bag.left = false);
+            pRight.addEventListener(ev, () => bag.right = false);
+        });
+
+        /* ----------------------------------------------------------------------
+           F. Game 2: Cabo Christmas Trivia Quiz
+           ---------------------------------------------------------------------- */
+        const questions = [
+            {
+                q: 'Which park is the home pitch and heart of Cabinteely GAA & Camogie?',
+                opts: ['Marlay Park', 'Kilbogget Park', 'Herbert Park', 'Bushy Park'],
+                ans: 1,
+                fact: 'Spot on! Kilbogget Park is home to our pitches, Saturday Nursery, and clubhouse.'
+            },
+            {
+                q: 'How do you say "Merry Christmas" in Irish (Gaeilge)?',
+                opts: ['Go raibh maith agat', 'Nollaig Shona Duit', 'Céad Míle Fáilte', 'Slán go fóill'],
+                ans: 1,
+                fact: 'Maith thú! "Nollaig Shona Duit" means Merry Christmas to you.'
+            },
+            {
+                q: 'Which Dublin club hosts Cabinteely GAA’s annual Christmas Craic & Ceol Night?',
+                opts: ['Seapoint Rugby Club', 'Croke Park', 'Dalymount Park', 'RDS Arena'],
+                ans: 0,
+                fact: 'Correct! Seapoint RFC in Killiney hosts our festive Christmas jumper social.'
+            },
+            {
+                q: 'What is the name of Cabinteely GAA’s weekly club fundraiser with a Christmas Special Draw?',
+                opts: ['Spin the Sliotar', 'Split the Bucket', 'Guess the Hurleys', 'Crossbar Challenge'],
+                ans: 1,
+                fact: 'Yes! Split the Bucket splits the pot 50/50 between our winner and juvenile club gear.'
+            },
+            {
+                q: 'What traditional St. Stephen’s Day (Dec 26) custom is celebrated by GAA clubs across Ireland?',
+                opts: ['Pancake Toss', 'Wren Day & Charity Puck-Arounds', 'Maypole Dancing', 'Pumpkin Carving'],
+                ans: 1,
+                fact: 'Spot on! St. Stephen’s Day charity puck-arounds are a beloved GAA festive tradition.'
+            }
+        ];
+
+        let qIdx = 0;
+        let qScore = 0;
+        let qLocked = false;
+
+        function renderQuestion() {
+            qLocked = false;
+            const item = questions[qIdx];
+            root.querySelector('#cabo-q-badge').textContent = 'Question ' + (qIdx + 1) + ' / ' + questions.length;
+            root.querySelector('#cabo-quiz-q').textContent = item.q;
+            const fb = root.querySelector('#cabo-quiz-fb');
+            fb.classList.add('is-hidden');
+            root.querySelector('#cabo-q-next').style.display = 'none';
+
+            const optsWrap = root.querySelector('#cabo-quiz-opts');
+            optsWrap.innerHTML = '';
+            item.opts.forEach((txt, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'cabo-opt-btn';
+                btn.innerHTML = '<span>' + txt + '</span><i class="fa-regular fa-circle" style="color: #94a3b8;"></i>';
+                btn.onclick = () => pickOption(idx, btn);
+                optsWrap.appendChild(btn);
+            });
+        }
+
+        function pickOption(idx, btn) {
+            if (qLocked) return;
+            qLocked = true;
+            const item = questions[qIdx];
+            const btns = root.querySelectorAll('.cabo-opt-btn');
+            const fb = root.querySelector('#cabo-quiz-fb');
+
+            btns.forEach((b, i) => {
+                b.disabled = true;
+                if (i === item.ans) {
+                    b.classList.add('is-correct');
+                    b.querySelector('i').className = 'fa-solid fa-circle-check';
+                }
+            });
+
+            if (idx === item.ans) {
+                qScore++;
+                root.querySelector('#cabo-q-score').textContent = qScore;
+                fb.style.background = '#dcfce7';
+                fb.style.color = '#006837';
+                fb.textContent = item.fact;
+            } else {
+                btn.classList.add('is-wrong');
+                btn.querySelector('i').className = 'fa-solid fa-circle-xmark';
+                fb.style.background = '#fee2e2';
+                fb.style.color = '#c1121f';
+                fb.textContent = 'Not quite! ' + item.fact;
+            }
+
+            fb.classList.remove('is-hidden');
+            const nextBtn = root.querySelector('#cabo-q-next');
+            nextBtn.style.display = 'inline-flex';
+            nextBtn.innerHTML = qIdx < questions.length - 1
+                ? 'Next Question <i class="fa-solid fa-arrow-right"></i>'
+                : 'See Score <i class="fa-solid fa-trophy"></i>';
+        }
+
+        function nextQuestion() {
+            if (qIdx < questions.length - 1) {
+                qIdx++;
+                renderQuestion();
+            } else {
+                root.querySelector('#cabo-quiz-box').innerHTML =
+                    '<div style="text-align: center; padding: 14px 6px;">' +
+                    '<h4 style="font-size: 20px; color: #006837; margin-bottom: 6px;">Quiz Complete!</h4>' +
+                    '<p style="font-size: 14px; font-weight: 700; color: #009245; margin-bottom: 12px;">You scored ' + qScore + ' out of ' + questions.length + '!</p>' +
+                    '<button type="button" class="cabo-btn btn-green" style="width: auto; padding: 10px 20px;" onclick="CaboXmas2026.resetQuiz()">' +
+                    '<i class="fa-solid fa-rotate-right"></i> Retake Quiz</button></div>';
+                root.querySelector('#cabo-q-next').style.display = 'none';
+            }
+        }
+
+        function resetQuiz() {
+            qIdx = 0;
+            qScore = 0;
+            root.querySelector('#cabo-q-score').textContent = '0';
+            root.querySelector('#cabo-quiz-box').innerHTML =
+                '<p id="cabo-quiz-q" class="cabo-quiz-q"></p>' +
+                '<div id="cabo-quiz-opts" class="cabo-quiz-opts"></div>' +
+                '<div id="cabo-quiz-fb" class="cabo-quiz-feedback is-hidden"></div>';
+            renderQuestion();
+        }
+
+        /* ----------------------------------------------------------------------
+           G. Zero-Dependency Web Audio API Festive Chimes Jukebox
+           ---------------------------------------------------------------------- */
+        let audioCtx = null;
+        let chimeTimers = [];
+
+        const melodies = [
+            {
+                name: 'Jingle Bells (Kilbogget Chimes)',
+                seq: [
+                    [659, 0.22], [659, 0.22], [659, 0.44],
+                    [659, 0.22], [659, 0.22], [659, 0.44],
+                    [659, 0.22], [784, 0.22], [523, 0.22], [587, 0.22], [659, 0.75],
+                    [698, 0.22], [698, 0.22], [698, 0.22], [698, 0.22],
+                    [698, 0.22], [659, 0.22], [659, 0.22], [659, 0.22],
+                    [659, 0.22], [587, 0.22], [587, 0.22], [659, 0.22], [587, 0.44], [784, 0.44]
+                ]
+            },
+            {
+                name: 'We Wish You a Merry Christmas',
+                seq: [
+                    [293, 0.3], [392, 0.3], [392, 0.16], [440, 0.16], [392, 0.16], [370, 0.16],
+                    [330, 0.3], [330, 0.3], [330, 0.3],
+                    [440, 0.3], [440, 0.16], [494, 0.16], [440, 0.16], [392, 0.16],
+                    [370, 0.3], [293, 0.3], [293, 0.3],
+                    [494, 0.3], [494, 0.16], [523, 0.16], [494, 0.16], [440, 0.16], [392, 0.3], [330, 0.6]
+                ]
+            },
+            {
+                name: 'Deck the Halls (Cabo Mix)',
+                seq: [
+                    [784, 0.36], [698, 0.16], [659, 0.3], [587, 0.3],
+                    [523, 0.3], [587, 0.3], [659, 0.3], [523, 0.3],
+                    [587, 0.16], [659, 0.16], [698, 0.16], [587, 0.16], [659, 0.36], [587, 0.16],
+                    [523, 0.3], [494, 0.3], [523, 0.65]
+                ]
+            }
+        ];
+
+        function stopAudio() {
+            chimeTimers.forEach(t => clearTimeout(t));
+            chimeTimers = [];
+            root.querySelector('#cabo-eq').classList.remove('is-playing');
+        }
+
+        function playTrack(idx) {
+            stopAudio();
+            const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+            if (!AudioContextClass) {
+                showToast('Audio Notice', 'Your browser does not support Web Audio chimes.', 'fa-volume-xmark');
+                return;
+            }
+            if (!audioCtx) audioCtx = new AudioContextClass();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+
+            const track = melodies[idx];
+            root.querySelector('#cabo-eq').classList.add('is-playing');
+            showToast('Now Playing Chimes', track.name, 'fa-music');
+
+            let offsetMs = 0;
+            track.seq.forEach(([freq, dur]) => {
+                const t = setTimeout(() => {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                    gain.gain.setValueAtTime(0.16, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur * 0.95);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + dur);
+                }, offsetMs);
+                chimeTimers.push(t);
+                offsetMs += dur * 1000;
+            });
+
+            chimeTimers.push(setTimeout(() => {
+                root.querySelector('#cabo-eq').classList.remove('is-playing');
+            }, offsetMs + 100));
+        }
+
+        /* Expose public API for inline buttons */
+        window.CaboXmas2026 = {
+            toggleSnow,
+            startGame,
+            nextQuestion,
+            resetQuiz,
+            pingRadar,
+            playTrack,
+            stopAudio,
+            copyLink
+        };
+
+        /* Boot Hub */
+        renderSnow();
+        tickCountdown();
+        setInterval(tickCountdown, 1000);
+        initSanta();
+        sizeCanvas();
+        renderQuestion();
+        window.addEventListener('resize', sizeCanvas);
+    })();
+    </script>
+</div>
