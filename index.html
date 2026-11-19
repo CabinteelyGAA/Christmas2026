@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinteely GAA & Camogie — Christmas Hub 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cabo-green: #006837;
+      --cabo-green-dark: #004d28;
+      --cabo-green-light: #009245;
+      --cabo-mint: #e8f5ee;
+      --cabo-gold: #f4b41a;
+      --cabo-gold-dark: #d99b08;
+      --cabo-red: #c1121f;
+      --cabo-cream: #fcfdf9;
+      --cabo-text: #16241d;
+      --cabo-muted: #4a6356;
+      --card-shadow: 0 10px 25px -5px rgba(0, 77, 40, 0.10), 0 4px 10px -2px rgba(0, 77, 40, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--cabo-cream);
+      color: var(--cabo-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Fredoka', sans-serif;
+      letter-spacing: 0.01em;
+    }
+
+    /* Snowfall Container */
+    #snow-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -20px;
+      color: #ffffff;
+      text-shadow: 0 0 6px rgba(0, 104, 55, 0.35);
+      user-select: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-20px) translateX(0px) rotate(0deg);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translateY(50vh) translateX(18px) rotate(180deg);
+      }
+      100% {
+        transform: translateY(105vh) translateX(-12px) rotate(360deg);
+        opacity: 0.3;
+      }
+    }
+
+    /* Main Container */
+    .hub-wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, var(--cabo-green-dark) 0%, var(--cabo-green) 55%, var(--cabo-green-light) 100%);
+      border-radius: 24px;
+      padding: 40px 28px;
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 18px 35px -10px rgba(0, 77, 40, 0.35);
+      border: 3px solid var(--cabo-gold);
+    }
+
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.12) 2px, transparent 2px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(244, 180, 26, 0.65);
+      color: #fff8e6;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      max-width: 720px;
+      margin: 0 auto 24px;
+      color: #e6f7ee;
+      position: relative;
+    }
+
+    .hero-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .snow-toggle-btn {
+      background: #ffffff;
+      color: var(--cabo-green-dark);
+      border: 2px solid var(--cabo-gold);
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .snow-toggle-btn:hover {
+      background: #fff9e6;
+      transform: translateY(-2px);
+    }
+
+    /* Countdown Timer */
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(68px, 105px));
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+    }
+
+    .countdown-box {
+      background: rgba(0, 38, 19, 0.45);
+      border: 2px solid rgba(244, 180, 26, 0.7);
+      border-radius: 16px;
+      padding: 12px 8px;
+      backdrop-filter: blur(4px);
+    }
+
+    .countdown-num {
+      display: block;
+      font-family: 'Fredoka', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      font-weight: 700;
+      color: var(--cabo-gold);
+      line-height: 1.1;
+    }
+
+    .countdown-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* Quick Jump Bar */
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 22px 0 32px;
+    }
+
+    .quick-pill {
+      text-decoration: none;
+      background: #ffffff;
+      color: var(--cabo-green-dark);
+      border: 2px solid #cbe6d7;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 3px 8px rgba(0, 77, 40, 0.06);
+      transition: all 0.18s ease;
+    }
+
+    .quick-pill:hover {
+      background: var(--cabo-green);
+      color: #ffffff;
+      border-color: var(--cabo-green);
+      transform: translateY(-2px);
+    }
+
+    /* Section Headings */
+    .section-header {
+      text-align: center;
+      margin: 42px 0 24px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
+      color: var(--cabo-green-dark);
+      margin-bottom: 6px;
+    }
+
+    .section-header p {
+      color: var(--cabo-muted);
+      font-size: 1.02rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 22px;
+    }
+
+    .hub-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      border: 2px solid #e1efe7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .hub-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--cabo-gold);
+    }
+
+    .card-tag {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--cabo-mint);
+      color: var(--cabo-green-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .card-tag.gold {
+      background: #fef5dc;
+      color: #8a5e00;
+    }
+
+    .card-tag.red {
+      background: #fde8ea;
+      color: var(--cabo-red);
+    }
+
+    .hub-card h3 {
+      font-size: 1.38rem;
+      color: var(--cabo-green-dark);
+      margin-bottom: 10px;
+    }
+
+    .hub-card p {
+      color: var(--cabo-muted);
+      font-size: 0.96rem;
+      margin-bottom: 18px;
+    }
+
+    .card-meta {
+      background: #f5faf7;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.9rem;
+      color: var(--cabo-text);
+      margin-bottom: 18px;
+      border-left: 4px solid var(--cabo-green);
+    }
+
+    .btn-primary {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      background: var(--cabo-green);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.96rem;
+      transition: background 0.18s ease, transform 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--cabo-green-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-gold {
+      background: var(--cabo-gold);
+      color: #1f1700;
+    }
+
+    .btn-gold:hover {
+      background: var(--cabo-gold-dark);
+    }
+
+    /* Interactive Games Section */
+    .games-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 860px) {
+      .games-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .game-panel {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      border: 2px solid #d5eadf;
+    }
+
+    .game-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .score-badges {
+      display: flex;
+      gap: 10px;
+    }
+
+    .score-pill {
+      background: var(--cabo-mint);
+      color: var(--cabo-green-dark);
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    .canvas-container {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 3px solid var(--cabo-green);
+      background: linear-gradient(180deg, #0b3b24 0%, #145c38 75%, #ffffff 75%, #e8f5ee 100%);
+    }
+
+    #caboGameCanvas {
+      display: block;
+      width: 100%;
+      height: 340px;
+      touch-action: none;
+      cursor: pointer;
+    }
+
+    .game-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 45, 24, 0.82);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .game-overlay.hidden {
+      display: none;
+    }
+
+    .touch-controls {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .touch-btn {
+      flex: 1;
+      max-width: 150px;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      border-radius: 12px;
+      border: 2px solid var(--cabo-green);
+      background: var(--cabo-mint);
+      color: var(--cabo-green-dark);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .touch-btn:active {
+      background: var(--cabo-green);
+      color: #ffffff;
+    }
+
+    /* Quiz Styling */
+    .quiz-question {
+      font-weight: 700;
+      font-size: 1.08rem;
+      color: var(--cabo-text);
+      margin-bottom: 14px;
+      min-height: 52px;
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .quiz-opt-btn {
+      text-align: left;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 2px solid #d5eadf;
+      background: #f9fcfa;
+      color: var(--cabo-text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .quiz-opt-btn:hover:not(:disabled) {
+      border-color: var(--cabo-green);
+      background: var(--cabo-mint);
+    }
+
+    .quiz-opt-btn.correct {
+      background: #d4f5e2;
+      border-color: #009245;
+      color: #004d28;
+    }
+
+    .quiz-opt-btn.wrong {
+      background: #fde8ea;
+      border-color: #c1121f;
+      color: #7f0912;
+    }
+
+    .quiz-feedback {
+      font-size: 0.92rem;
+      font-weight: 600;
+      min-height: 42px;
+      color: var(--cabo-green-dark);
+      margin-bottom: 10px;
+    }
+
+    /* Santa Tracker & Jukebox */
+    .radar-box {
+      background: linear-gradient(135deg, #092c1b 0%, #00542c 100%);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 24px;
+      border: 2px solid var(--cabo-gold);
+    }
+
+    .radar-status {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 14px;
+      border-radius: 14px;
+      margin: 14px 0 18px;
+    }
+
+    .pulse-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ff4d4d;
+      box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7);
+      animation: pulse 1.6s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(255, 77, 77, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+    }
+
+    .tracker-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .jukebox-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 14px 0 18px;
+    }
+
+    .tune-btn {
+      padding: 12px;
+      border-radius: 12px;
+      border: 2px solid #cbe6d7;
+      background: #f5faf7;
+      color: var(--cabo-green-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .tune-btn:hover, .tune-btn.playing {
+      background: var(--cabo-green);
+      color: #ffffff;
+      border-color: var(--cabo-green);
+    }
+
+    /* Archive Footer */
+    .archive-bar {
+      margin-top: 44px;
+      background: var(--cabo-mint);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      border: 2px solid #cbe6d7;
+    }
+
+    .archive-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .archive-link {
+      text-decoration: none;
+      background: #ffffff;
+      color: var(--cabo-green-dark);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: 1px solid #b5dcc6;
+    }
+
+    .archive-link:hover {
+      background: var(--cabo-green);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Snowfall Overlay -->
+  <div id="snow-layer" aria-hidden="true"></div>
+
+  <div class="hub-wrapper">
+    <!-- Hero Section -->
+    <header class="hero-banner">
+      <div class="hero-badge">🎄 Kilbogget Park • Nollaig Shona 2026</div>
+      <h1 class="hero-title">Cabinteely GAA &amp; Camogie<br>Christmas Hub 2026</h1>
+      <p class="hero-subtitle">
+        Welcome to our annual festive clubhouse hub! Check out club Christmas events, get your gear orders in before the Santa deadline, track Santa's sleigh, and test your skills on our Cabo Christmas games.
+      </p>
+
+      <div class="hero-controls">
+        <button id="toggleSnowBtn" class="snow-toggle-btn" type="button">❄️ Pause Snow</button>
+      </div>
+
+      <!-- Live Countdown -->
+      <div class="countdown-grid" aria-label="Countdown to Christmas Day 2026">
+        <div class="countdown-box">
+          <span class="countdown-num" id="cd-days">--</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-num" id="cd-hours">--</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-num" id="cd-mins">--</span>
+          <span class="countdown-label">Mins</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-num" id="cd-secs">--</span>
+          <span class="countdown-label">Secs</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quick Navigation -->
+    <nav class="quick-nav" aria-label="Christmas Hub Sections">
+      <a href="#events" class="quick-pill">🎉 Club Events &amp; Shop</a>
+      <a href="#games" class="quick-pill">🏑 Cabo Mini-Games</a>
+      <a href="#santa-music" class="quick-pill">🎅 Santa Tracker &amp; Tunes</a>
+      <a href="#archives" class="quick-pill">📸 Past Years</a>
+    </nav>
+
+    <!-- Club Events & Fundraising -->
+    <section id="events">
+      <div class="section-header">
+        <h2>Clubhouse Events, Gear &amp; Fundraising</h2>
+        <p>Everything happening across Cabinteely GAA &amp; Camogie this December.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="hub-card">
+          <div>
+            <span class="card-tag red">Club Social</span>
+            <h3>Christmas Craic &amp; Ceol Night</h3>
+            <p>Join parents, coaches, players, and friends for our annual festive club night out with live music, finger food, and plenty of craic.</p>
+            <div class="card-meta">
+              <strong>📅 Date:</strong> Friday, 11th December 2026<br>
+              <strong>📍 Venue:</strong> Seapoint Rugby Club<br>
+              <strong>🎶 Music:</strong> Live set by Fionn Lowry &amp; Tahlia Torpey
+            </div>
+          </div>
+          <a href="https://cabinteelygaa.clubzap.com/categories/fundraising/products" target="_top" class="btn-primary">View Event Details</a>
+        </article>
+
+        <article class="hub-card">
+          <div>
+            <span class="card-tag gold">Club Gear</span>
+            <h3>McKeever Christmas Shop Orders</h3>
+            <p>Looking for Cabinteely jerseys, half-zips, beanies, or training gear under the tree? Make sure to order early for guaranteed pre-Christmas delivery.</p>
+            <div class="card-meta">
+              <strong>🎁 Tip:</strong> Order early to avoid December courier delays.<br>
+              <strong>👕 Range:</strong> Juvenile &amp; Adult GAA / Camogie gear
+            </div>
+          </div>
+          <a href="https://cabinteelygaa.com/shop" target="_blank" rel="noopener" class="btn-primary btn-gold">Visit Club Shop</a>
+        </article>
+
+        <article class="hub-card">
+          <div>
+            <span class="card-tag">Club Fundraiser</span>
+            <h3>Christmas Split the Bucket</h3>
+            <p>Support our juvenile teams and pitch development at Kilbogget Park by entering our bumper Christmas Split the Bucket draw!</p>
+            <div class="card-meta">
+              <strong>🏆 Prize:</strong> 50% of the pot goes straight to one lucky winner.<br>
+              <strong>🎟️ Entry:</strong> Available online or via ClubZap
+            </div>
+          </div>
+          <a href="https://cabinteelygaa.clubzap.com/categories/lotto/products" target="_top" class="btn-primary">Enter Christmas Draw</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Interactive Games -->
+    <section id="games">
+      <div class="section-header">
+        <h2>Cabo Christmas Arcade</h2>
+        <p>Challenge your teammates and family to beat the high score!</p>
+      </div>
+
+      <div class="games-layout">
+        <!-- Game 1: Canvas Catch -->
+        <div class="game-panel">
+          <div class="game-header-bar">
+            <div>
+              <h3>🏑 Sliotar &amp; Snowball Catch</h3>
+              <p style="font-size: 0.9rem; color: var(--cabo-muted);">Catch Sliotars (+10) &amp; Golden Stars (+25). Dodge the Lumps of Coal!</p>
+            </div>
+            <div class="score-badges">
+              <span class="score-pill">Score: <span id="gameScore">0</span></span>
+              <span class="score-pill">Best: <span id="gameBest">0</span></span>
+            </div>
+          </div>
+
+          <div class="canvas-container">
+            <canvas id="caboGameCanvas" width="560" height="340"></canvas>
+            <div id="gameOverlay" class="game-overlay">
+              <h3 id="overlayTitle" style="font-size: 1.7rem; color: var(--cabo-gold); margin-bottom: 8px;">Ready for Throw-In?</h3>
+              <p id="overlayMsg" style="max-width: 340px; margin-bottom: 18px; font-size: 0.95rem;">
+                Move your Cabo Santa helmet left &amp; right using the arrows, mouse, or touch buttons below.
+              </p>
+              <button id="startGameBtn" class="btn-primary btn-gold" type="button">▶ Start Game</button>
+            </div>
+          </div>
+
+          <div class="touch-controls">
+            <button id="btnLeft" class="touch-btn" type="button">⬅️ Left</button>
+            <button id="btnRight" class="touch-btn" type="button">Right ➡️</button>
+          </div>
+        </div>
+
+        <!-- Game 2: Trivia Quiz -->
+        <div class="game-panel" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="game-header-bar">
+              <h3>🧠 Cabo Christmas Quiz</h3>
+              <span class="score-pill" id="quizProgress">Q 1 / 5</span>
+            </div>
+            <p class="quiz-question" id="quizQuestion">Loading question...</p>
+            <div class="quiz-options" id="quizOptions"></div>
+            <div class="quiz-feedback" id="quizFeedback"></div>
+          </div>
+          <button id="nextQuizBtn" class="btn-primary" type="button" style="display: none; width: 100%;">Next Question ➡️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Santa Tracker & Jukebox -->
+    <section id="santa-music">
+      <div class="section-header">
+        <h2>Santa Radar &amp; Clubhouse Tunes</h2>
+        <p>Keep an eye on the skies over Dublin 18 and play some festive chimes.</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Santa Tracker -->
+        <div class="radar-box">
+          <span class="card-tag gold">Live North Pole Feed</span>
+          <h3 style="font-size: 1.45rem; margin-bottom: 8px;">🎅 Kilbogget Park Santa Radar</h3>
+          <p style="color: #d5f0e2; font-size: 0.95rem;">
+            Our pitch floodlight sensors are scanning the skies above Cabinteely for Rudolph's red nose!
+          </p>
+          <div class="radar-status">
+            <span class="pulse-dot"></span>
+            <div id="santaStatusText" style="font-size: 0.92rem; font-weight: 600;">
+              Checking sleigh telemetry from the North Pole...
+            </div>
+          </div>
+          <div class="tracker-links">
+            <a href="https://www.noradsanta.org" target="_blank" rel="noopener" class="btn-primary btn-gold">🛰️ NORAD Santa Tracker</a>
+            <a href="https://santatracker.google.com" target="_blank" rel="noopener" class="btn-primary">🎄 Google Santa Village</a>
+          </div>
+        </div>
+
+        <!-- Festive Jukebox -->
+        <div class="hub-card">
+          <div>
+            <span class="card-tag">Clubhouse Audio</span>
+            <h3>🔔 Festive Bell Jukebox</h3>
+            <p>Tap a Christmas classic below to play festive synthesized chimes right in your browser!</p>
+            <div class="jukebox-grid">
+              <button class="tune-btn" type="button" data-tune="jingle">🔔 Jingle Bells</button>
+              <button class="tune-btn" type="button" data-tune="wish">🎄 We Wish You a Merry Christmas</button>
+              <button class="tune-btn" type="button" data-tune="deck">🎶 Deck the Halls</button>
+              <button class="tune-btn" type="button" data-tune="stop">⏹️ Stop Music</button>
+            </div>
+          </div>
+          <div style="font-size: 0.85rem; color: var(--cabo-muted);">
+            Tip: Make sure your phone isn't on silent mode to hear the chimes!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Christmas Archives -->
+    <footer id="archives" class="archive-bar">
+      <h3 style="color: var(--cabo-green-dark); font-size: 1.3rem;">🎄 Look Back at Previous Cabo Christmases</h3>
+      <p style="color: var(--cabo-muted); font-size: 0.95rem;">Browse our festive hubs from recent seasons at Cabinteely GAA &amp; Camogie.</p>
+      <div class="archive-links">
+        <a href="https://cabinteelygaa.com/our-news/christmas-2025" target="_top" class="archive-link">Christmas Hub 2025</a>
+        <a href="https://cabinteelygaa.com/our-news/christmas-2024" target="_top" class="archive-link">Christmas Hub 2024</a>
+        <a href="https://cabinteelygaa.com/our-news/christmas-2023" target="_top" class="archive-link">Christmas Hub 2023</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    /* =========================================
+       1. SNOWFALL GENERATOR
+    ========================================= */
+    const snowLayer = document.getElementById('snow-layer');
+    const toggleSnowBtn = document.getElementById('toggleSnowBtn');
+    let snowEnabled = true;
+
+    function createSnowflakes() {
+      snowLayer.innerHTML = '';
+      const flakes = ['❄', '❅', '❆', '•'];
+      for (let i = 0; i < 36; i++) {
+        const span = document.createElement('span');
+        span.className = 'snowflake';
+        span.textContent = flakes[Math.floor(Math.random() * flakes.length)];
+        span.style.left = Math.random() * 100 + 'vw';
+        span.style.fontSize = (Math.random() * 14 + 10) + 'px';
+        span.style.animationDuration = (Math.random() * 7 + 6) + 's';
+        span.style.animationDelay = (Math.random() * 6) + 's';
+        snowLayer.appendChild(span);
+      }
+    }
+
+    toggleSnowBtn.addEventListener('click', () => {
+      snowEnabled = !snowEnabled;
+      snowLayer.style.display = snowEnabled ? 'block' : 'none';
+      toggleSnowBtn.textContent = snowEnabled ? '❄️ Pause Snow' : '❄️ Let It Snow';
+    });
+
+    createSnowflakes();
+
+    /* =========================================
+       2. CHRISTMAS 2026 COUNTDOWN & SANTA RADAR
+    ========================================= */
+    function updateCountdown() {
+      const target = new Date('December 25, 2026 00:00:00').getTime();
+      const now = Date.now();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '0';
+        document.getElementById('cd-hours').textContent = '0';
+        document.getElementById('cd-mins').textContent = '0';
+        document.getElementById('cd-secs').textContent = '0';
+        document.getElementById('santaStatusText').textContent = '🎅 Nollaig Shona! Santa has visited Kilbogget Park!';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / 1000 / 60) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('cd-days').textContent = days;
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+
+      const statusEl = document.getElementById('santaStatusText');
+      if (days > 1) {
+        statusEl.textContent = `Workshop Update: Elves are wrapping presents! ${days} days until Santa flies over Dublin 18.`;
+      } else {
+        statusEl.textContent = '🚨 SLEIGH AIRBORNE! Keep an eye out over Cabinteely tonight!';
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    /* =========================================
+       3. CABO SLIOTAR & SNOWBALL CATCH GAME
+    ========================================= */
+    const canvas = document.getElementById('caboGameCanvas');
+    const ctx = canvas.getContext('2d');
+    const overlay = document.getElementById('gameOverlay');
+    const overlayTitle = document.getElementById('overlayTitle');
+    const overlayMsg = document.getElementById('overlayMsg');
+    const startGameBtn = document.getElementById('startGameBtn');
+    const scoreEl = document.getElementById('gameScore');
+    const bestEl = document.getElementById('gameBest');
+
+    let bestScore = parseInt(localStorage.getItem('caboXmasBest2026') || '0', 10);
+    bestEl.textContent = bestScore;
+
+    let gameRunning = false;
+    let score = 0;
+    let lives = 3;
+    let items = [];
+    let spawnTimer = 0;
+    let animId = null;
+
+    const player = {
+      x: canvas.width / 2 - 34,
+      y: canvas.height - 54,
+      w: 68,
+      h: 40,
+      speed: 7,
+      moveLeft: false,
+      moveRight: false
+    };
+
+    function resetGame() {
+      score = 0;
+      lives = 3;
+      items = [];
+      spawnTimer = 0;
+      player.x = canvas.width / 2 - player.w / 2;
+      scoreEl.textContent = '0';
+      gameRunning = true;
+      overlay.classList.add('hidden');
+      if (animId) cancelAnimationFrame(animId);
+      gameLoop();
+    }
+
+    function spawnItem() {
+      const rand = Math.random();
+      let type = 'sliotar'; // +10
+      if (rand > 0.78) type = 'star'; // +25
+      else if (rand < 0.28) type = 'coal'; // -1 life
+
+      items.push({
+        x: Math.random() * (canvas.width - 36) + 18,
+        y: -24,
+        r: 16,
+        speed: 2.8 + Math.random() * 2.2 + Math.min(score / 120, 3),
+        type
+      });
+    }
+
+    function drawPlayer() {
+      // Green GAA Helmet / Bucket with Santa Trim
+      ctx.fillStyle = '#006837';
+      ctx.beginPath();
+      ctx.roundRect(player.x, player.y + 8, player.w, player.h - 8, 10);
+      ctx.fill();
+
+      // Gold Stripe
+      ctx.fillStyle = '#f4b41a';
+      ctx.fillRect(player.x, player.y + 18, player.w, 6);
+
+      // White Fluffy Santa Trim on top
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.roundRect(player.x - 4, player.y, player.w + 8, 12, 6);
+      ctx.fill();
+    }
+
+    function drawItems() {
+      items.forEach(item => {
+        ctx.font = '26px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        if (item.type === 'sliotar') {
+          // Draw white sliotar with green/gold rim
+          ctx.fillStyle = '#ffffff';
+          ctx.beginPath();
+          ctx.arc(item.x, item.y, 14, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.strokeStyle = '#006837';
+          ctx.lineWidth = 2.5;
+          ctx.stroke();
+        } else if (item.type === 'star') {
+          ctx.fillText('⭐', item.x, item.y);
+        } else {
+          ctx.fillText('🪨', item.x, item.y);
+        }
+      });
+    }
+
+    function drawHUD() {
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 16px Plus Jakarta Sans, sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillText('Lives: ' + '❤️'.repeat(lives), 14, 26);
+    }
+
+    function gameLoop() {
+      if (!gameRunning) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Move Player
+      if (player.moveLeft) player.x -= player.speed;
+      if (player.moveRight) player.x += player.speed;
+      player.x = Math.max(4, Math.min(canvas.width - player.w - 4, player.x));
+
+      // Spawn Items
+      spawnTimer++;
+      if (spawnTimer > 38) {
+        spawnItem();
+        spawnTimer = 0;
+      }
+
+      // Update Items
+      for (let i = items.length - 1; i >= 0; i--) {
+        const it = items[i];
+        it.y += it.speed;
+
+        // Collision check
+        if (
+          it.y + it.r >= player.y &&
+          it.y - it.r <= player.y + player.h &&
+          it.x >= player.x - 10 &&
+          it.x <= player.x + player.w + 10
+        ) {
+          if (it.type === 'sliotar') {
+            score += 10;
+          } else if (it.type === 'star') {
+            score += 25;
+          } else {
+            lives--;
+          }
+          scoreEl.textContent = score;
+          items.splice(i, 1);
+
+          if (lives <= 0) {
+            endGame();
+            return;
+          }
+          continue;
+        }
+
+        if (it.y > canvas.height + 30) {
+          items.splice(i, 1);
+        }
+      }
+
+      drawPlayer();
+      drawItems();
+      drawHUD();
+
+      animId = requestAnimationFrame(gameLoop);
+    }
+
+    function endGame() {
+      gameRunning = false;
+      if (score > bestScore) {
+        bestScore = score;
+        localStorage.setItem('caboXmasBest2026', String(bestScore));
+        bestEl.textContent = bestScore;
+      }
+      overlayTitle.textContent = 'Full-Time Whistle! 📯';
+      overlayMsg.textContent = `You scored ${score} points! Can you beat your best of ${bestScore}?`;
+      startGameBtn.textContent = '🔄 Play Again';
+      overlay.classList.remove('hidden');
+    }
+
+    startGameBtn.addEventListener('click', resetGame);
+
+    // Keyboard & Pointer Controls
+    window.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft' || e.key === 'a') player.moveLeft = true;
+      if (e.key === 'ArrowRight' || e.key === 'd') player.moveRight = true;
+    });
+    window.addEventListener('keyup', e => {
+      if (e.key === 'ArrowLeft' || e.key === 'a') player.moveLeft = false;
+      if (e.key === 'ArrowRight' || e.key === 'd') player.moveRight = false;
+    });
+
+    canvas.addEventListener('pointermove', e => {
+      if (!gameRunning) return;
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const pointerX = (e.clientX - rect.left) * scaleX;
+      player.x = Math.max(4, Math.min(canvas.width - player.w - 4, pointerX - player.w / 2));
+    });
+
+    const btnLeft = document.getElementById('btnLeft');
+    const btnRight = document.getElementById('btnRight');
+    btnLeft.addEventListener('pointerdown', () => player.moveLeft = true);
+    btnLeft.addEventListener('pointerup', () => player.moveLeft = false);
+    btnLeft.addEventListener('pointerleave', () => player.moveLeft = false);
+    btnRight.addEventListener('pointerdown', () => player.moveRight = true);
+    btnRight.addEventListener('pointerup', () => player.moveRight = false);
+    btnRight.addEventListener('pointerleave', () => player.moveRight = false);
+
+    /* =========================================
+       4. CABO CHRISTMAS TRIVIA QUIZ
+    ========================================= */
+    const quizData = [
+      {
+        q: "Where are the home pitches of Cabinteely GAA & Camogie located?",
+        options: ["Kilbogget Park", "Croke Park", "Phoenix Park"],
+        answer: 0,
+        fact: "Spot on! Kilbogget Park is the heart of Cabinteely GAA & Camogie."
+      },
+      {
+        q: "How do you say 'Happy Christmas' in Irish (Gaeilge)?",
+        options: ["Lá Fhéile Pádraig", "Nollaig Shona Duit", "Go raibh maith agat"],
+        answer: 1,
+        fact: "Maith thú! 'Nollaig Shona Duit' means Happy Christmas to you."
+      },
+      {
+        q: "What is the name of the ball used in Hurling and Camogie?",
+        options: ["O'Neills", "Sliotar", "Hurley"],
+        answer: 1,
+        fact: "Correct! A Sliotar is used in both Hurling and Camogie."
+      },
+      {
+        q: "Which traditional Irish charity swim happens on Christmas morning near Cabinteely?",
+        options: ["The Forty Foot Swim", "The Liffey Descent", "The Galway Bay Swim"],
+        answer: 0,
+        fact: "Yes! Hundreds of brave swimmers head down to the Forty Foot in Sandycove every Christmas Day."
+      },
+      {
+        q: "What colours do Cabinteely GAA & Camogie wear with pride?",
+        options: ["Red & Black", "Green & White", "Purple & Yellow"],
+        answer: 1,
+        fact: "Up Cabo! Green and White all the way."
+      }
+    ];
+
+    let currentQ = 0;
+    let quizScore = 0;
+
+    const qProgress = document.getElementById('quizProgress');
+    const qText = document.getElementById('quizQuestion');
+    const qOptions = document.getElementById('quizOptions');
+    const qFeedback = document.getElementById('quizFeedback');
+    const nextQuizBtn = document.getElementById('nextQuizBtn');
+
+    function loadQuiz() {
+      const item = quizData[currentQ];
+      qProgress.textContent = `Q ${currentQ + 1} / ${quizData.length}`;
+      qText.textContent = item.q;
+      qOptions.innerHTML = '';
+      qFeedback.textContent = '';
+      nextQuizBtn.style.display = 'none';
+
+      item.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'quiz-opt-btn';
+        btn.textContent = opt;
+        btn.addEventListener('click', () => handleAnswer(idx, btn));
+        qOptions.appendChild(btn);
+      });
+    }
+
+    function handleAnswer(selectedIdx, clickedBtn) {
+      const item = quizData[currentQ];
+      const allBtns = qOptions.querySelectorAll('button');
+      allBtns.forEach(b => b.disabled = true);
+
+      if (selectedIdx === item.answer) {
+        clickedBtn.classList.add('correct');
+        quizScore++;
+        qFeedback.textContent = '✅ ' + item.fact;
+      } else {
+        clickedBtn.classList.add('wrong');
+        allBtns[item.answer].classList.add('correct');
+        qFeedback.textContent = '❌ Good try! ' + item.fact;
+      }
+
+      nextQuizBtn.textContent = currentQ < quizData.length - 1 ? 'Next Question ➡️' : 'See Final Score 🏆';
+      nextQuizBtn.style.display = 'block';
+    }
+
+    nextQuizBtn.addEventListener('click', () => {
+      currentQ++;
+      if (currentQ < quizData.length) {
+        loadQuiz();
+      } else {
+        qProgress.textContent = 'Complete!';
+        qText.textContent = `You scored ${quizScore} out of ${quizData.length}! Nollaig Shona from everyone at Cabinteely GAA!`;
+        qOptions.innerHTML = '';
+        qFeedback.textContent = quizScore === 5 ? '🌟 Full marks! True Cabo legend!' : '🎄 Great effort! Try again to get 5/5.';
+        nextQuizBtn.textContent = '🔄 Restart Quiz';
+        currentQ = -1;
+      }
+    });
+
+    loadQuiz();
+
+    /* =========================================
+       5. WEB AUDIO FESTIVE BELL JUKEBOX
+    ========================================= */
+    let audioCtx = null;
+    let activeTimers = [];
+
+    const melodies = {
+      jingle: [
+        [659.25, 0.22], [659.25, 0.22], [659.25, 0.44],
+        [659.25, 0.22], [659.25, 0.22], [659.25, 0.44],
+        [659.25, 0.22], [783.99, 0.22], [523.25, 0.3], [587.33, 0.16], [659.25, 0.6]
+      ],
+      wish: [
+        [523.25, 0.25], [698.46, 0.25], [698.46, 0.15], [783.99, 0.15], [698.46, 0.15], [659.25, 0.15],
+        [587.33, 0.25], [587.33, 0.25], [587.33, 0.25], [783.99, 0.25], [783.99, 0.15], [880.00, 0.15], [783.99, 0.15], [698.46, 0.15], [659.25, 0.35], [523.25, 0.35]
+      ],
+      deck: [
+        [783.99, 0.3], [698.46, 0.15], [659.25, 0.25], [587.33, 0.25],
+        [523.25, 0.25], [587.33, 0.25], [659.25, 0.25], [523.25, 0.25],
+        [587.33, 0.15], [659.25, 0.15], [698.46, 0.15], [587.33, 0.15], [659.25, 0.35], [587.33, 0.15], [523.25, 0.25], [493.88, 0.25], [523.25, 0.45]
+      ]
+    };
+
+    function stopMusic() {
+      activeTimers.forEach(t => clearTimeout(t));
+      activeTimers = [];
+      document.querySelectorAll('.tune-btn').forEach(b => b.classList.remove('playing'));
+    }
+
+    function playTune(name, btn) {
+      stopMusic();
+      if (name === 'stop' || !melodies[name]) return;
+
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      btn.classList.add('playing');
+      let elapsed = 0;
+
+      melodies[name].forEach(([freq, dur]) => {
+        const timer = setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+          gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + dur);
+        }, elapsed * 1000);
+
+        activeTimers.push(timer);
+        elapsed += dur + 0.05;
+      });
+
+      const endTimer = setTimeout(() => {
+        btn.classList.remove('playing');
+      }, elapsed * 1000);
+      activeTimers.push(endTimer);
+    }
+
+    document.querySelectorAll('.tune-btn').forEach(btn => {
+      btn.addEventListener('click', () => playTune(btn.dataset.tune, btn));
+    });
+  </script>
+</body>
+</html>
